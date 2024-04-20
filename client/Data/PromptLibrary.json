@@ -8,27 +8,9 @@
     },
     {
       "id": 2,
-      "title": "Abandoned Cart Email",
-      "description": "Crafts a prompt which can be used to remind customers about abandoned cart items.",
-      "prompt_text": "Subject Line: “Re: Your Abandoned Cart – Don’t Forget Your Favorites! 🛒”  \n Body Prompt: “Remind customers of items they’ve left in their shopping cart, providing a gentle nudge to complete their purchase and offering assistance if needed.”"
-    },
-    {
-      "id": 3,
-      "title": "Abandoned Cart Email",
-      "description": "Crafts a prompt which can be used to remind customers about abandoned cart items.",
-      "prompt_text": "Subject Line: “Re: Your Abandoned Cart – Don’t Forget Your Favorites! 🛒”  \n Body Prompt: “Remind customers of items they’ve left in their shopping cart, providing a gentle nudge to complete their purchase and offering assistance if needed.”"
-    },
-    {
-      "id": 4,
-      "title": "Abandoned Cart Email",
-      "description": "Crafts a prompt which can be used to remind customers about abandoned cart items.",
-      "prompt_text": "Subject Line: “Re: Your Abandoned Cart – Don’t Forget Your Favorites! 🛒”  \n Body Prompt: “Remind customers of items they’ve left in their shopping cart, providing a gentle nudge to complete their purchase and offering assistance if needed.”"
-    }
-    ,{
-      "id": 5,
-      "title": "Abandoned Cart Email",
-      "description": "Crafts a prompt which can be used to remind customers about abandoned cart items.",
-      "prompt_text": "Subject Line: “Re: Your Abandoned Cart – Don’t Forget Your Favorites! 🛒”  \n Body Prompt: “Remind customers of items they’ve left in their shopping cart, providing a gentle nudge to complete their purchase and offering assistance if needed.”"
+      "title": "Improve Your Sales Copy",
+      "description": "Ask GPT to improve something by giving an objective to improve.",
+      "prompt_text": "Can you provide suggestions for how I can improve [subject] with the goal of [objective]?"
     }
   ]
 }
