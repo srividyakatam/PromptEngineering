@@ -4,16 +4,11 @@ import "../Styles/PromptAnalyzer.css";
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY = "your_api_key";
-
-const systemMessage = { //  Explain things like you're talking to a software professional with 5 years of experience.
-  "role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."
-}
-
+// const systemMessage = {"role": "system", "content": "You are an expert at crafting effective prompts and train others to achieve the same. For each prompt given to you, analyze the prompt for clarity, specificity and any potential baises. If a prompt is biased, reject the prompt saying you do not support biased prompts. Give any useful guidance and tips for the users to improve."}
 export const PromptAnalyzer = () => {
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm ChatGPT! Ask me anything!",
+      message: "Hello, I'm ChatGPT trained on tutoring Prompting Techniques! Ask me your anything related to crafting perfect prompts!",
       sentTime: "just now",
       direction: 'incoming',
       sender: "ChatGPT"
@@ -32,16 +27,12 @@ export const PromptAnalyzer = () => {
 
     setMessages(newMessages);
 
-    // Initial system message to determine ChatGPT functionality
-    // How it responds, how it talks, etc.
     setIsTyping(true);
     await processMessageToChatGPT(newMessages);
   };
 
-  async function processMessageToChatGPT(chatMessages) { // messages is an array of messages
-    // Format messages for chatGPT API
+  async function processMessageToChatGPT(chatMessages) {
     // API is expecting objects in format of { role: "user" or "assistant", "content": "message here"}
-    // So we need to reformat
 
     let apiMessages = chatMessages.map((messageObject) => {
       let role = "";
@@ -53,23 +44,17 @@ export const PromptAnalyzer = () => {
       return { role: role, content: messageObject.message }
     });
 
-
-    // Get the request body set up with the model we plan to use
-    // and the messages which we formatted above. We add a system message in the front to'
-    // determine how we want chatGPT to act. 
     const apiRequestBody = {
-      "model": "gpt-3.5-turbo",
       "messages": [
-        systemMessage,  // The system message DEFINES the logic of our chatGPT
+        // systemMessage, 
         ...apiMessages // The messages from our chat with ChatGPT
       ]
     }
 
-    await fetch("https://api.openai.com/v1/chat/completions",
+    await fetch("http://127.0.0.1:8080/chat",
       {
         method: "POST",
         headers: {
-          "Authorization": "Bearer " + API_KEY,
           "Content-Type": "application/json"
         },
         body: JSON.stringify(apiRequestBody)
@@ -78,7 +63,7 @@ export const PromptAnalyzer = () => {
       }).then((data) => {
         console.log(data);
         setMessages([...chatMessages, {
-          message: data.choices[0].message.content,
+          message: data.response,
           sender: "ChatGPT",
           direction: 'incoming'
         }]);
