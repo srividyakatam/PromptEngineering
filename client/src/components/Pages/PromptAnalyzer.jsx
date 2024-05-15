@@ -33,7 +33,6 @@ export const PromptAnalyzer = () => {
 
   async function processMessageToChatGPT(chatMessages) {
     // API is expecting objects in format of { role: "user" or "assistant", "content": "message here"}
-
     let apiMessages = chatMessages.map((messageObject) => {
       let role = "";
       if (messageObject.sender === "ChatGPT") {
@@ -43,14 +42,12 @@ export const PromptAnalyzer = () => {
       }
       return { role: role, content: messageObject.message }
     });
-
     const apiRequestBody = {
       "messages": [
         // systemMessage, 
         ...apiMessages // The messages from our chat with ChatGPT
       ]
     }
-
     await fetch("http://127.0.0.1:8080/chat",
       {
         method: "POST",

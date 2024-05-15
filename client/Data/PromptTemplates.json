@@ -1,17 +1,6 @@
 {
   "categories": [
     {
-      "name": "Ideation",
-      "templates": [
-        {
-          "name": "SeasonalThemes",
-          "parameters": ["Languages", "Emotional Appeal"],
-          "description": "Sample Seasonal theme template",
-          "prompt_text": "Sample prompt text"
-        }
-      ]
-    },
-    {
       "name": "Design",
       "templates": [
         {
@@ -23,7 +12,7 @@
             "Additional Details": {
               "type": "textarea",
               "label": "Additional Details",
-              "placeholder": "Provide additional details lke dancing in the rain, at a carnival",
+              "placeholder": "Provide additional details like dancing in the rain, at a carnival",
               "size": "large"
             }
           }

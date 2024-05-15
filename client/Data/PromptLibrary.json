@@ -11,6 +11,26 @@
       "title": "Improve Your Sales Copy",
       "description": "Ask GPT to improve something by giving an objective to improve.",
       "prompt_text": "Can you provide suggestions for how I can improve [subject] with the goal of [objective]?"
+    },
+    {
+      "id": 3,
+      "title": "Urgency and Scarcity Email",
+      "description": "Create an email for flash sale.",
+      "prompt_text": "Create an email copy and subject line that stresses urgency and scarcity.[additional context]"
+    },
+    {
+      "id": 4,
+      "title": "Interactive Content",
+      "description": "Create an email for flash sale.",
+      "prompt_text": "Create an email copy and subject line invites the reader to read and engage with your content.[additonal context]"
+    },
+    {
+      "id": 5,
+      "title": "Improve Your Sales Copy",
+      "description": "Ask GPT to improve something by giving an objective to improve.",
+      "prompt_text": "Can you provide suggestions for how I can improve [subject] with the goal of [objective]?"
     }
+
+
   ]
 }

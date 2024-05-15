@@ -18,7 +18,7 @@ def chat():
 
     try:
         from openai import OpenAI
-        client = OpenAI(api_key = "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")
+        client = OpenAI(api_key = "your_api_key")
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=messages

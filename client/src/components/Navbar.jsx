@@ -8,8 +8,8 @@ export const Navbar = () => {
 
   return (
     <nav>
-      <Link to="/" className="title">
-        Prompt Tutor
+      <Link to="/PromptLibrary" className="title">
+        Prompt Engineering Toolkit
       </Link>
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
