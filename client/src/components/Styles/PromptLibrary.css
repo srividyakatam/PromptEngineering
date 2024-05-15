@@ -1,0 +1,15 @@
+.prompt-library {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #faf9f6; */
+  }
+  
+  .col {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
